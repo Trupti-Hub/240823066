@@ -142,13 +142,163 @@
 // Definition: Count how many digits a number contains. Input: 5023 
 // Output: 4 
 
-let num = 5023
-let count = 0
+// let num = 5023
+// let count = 0
 
-while (num > 0) {
-  count++
-  num = (num - num % 10) / 10
-}
+// while (num > 0) {
+//   count++
+//   num = (num - num % 10) / 10
+// }
 
-console.log(count)
+// console.log(count)
 
+// 11. Sum of Digits
+// Definition: Calculate the sum of all digits in a number.
+// Input: 123
+// Output: 6
+
+// let num = 123
+// let sum = 0
+
+// while (num > 0) {
+//   sum = sum + num % 10;          
+//   num = (num - num % 10) / 10    
+// }
+
+// console.log(sum)
+
+// 12. Check Armstrong Number
+// Definition: Check if the number is equal to the sum of its digits each raised to the power of
+// the number of digits.
+// Input: 153
+// Output: Armstrong
+
+
+// 13. Generate Fibonacci Series
+// Definition: Generate the first n Fibonacci numbers.
+// Input: 5
+// Output: 0 1 1 2 3
+
+// let n = 5
+// let a = 0, b = 1, c
+
+// for (let i = 0; i < n; i++) {
+//   console.log(a)
+//   c = a + b
+//   a = b
+//   b = c
+// }
+
+
+// 14. Check Vowel or Consonant
+// Definition: Determine if a given character is a vowel.
+// Input: a
+// Output: Vowel
+
+// let char = 'a'
+
+// if (
+//   char === 'a' || char === 'e' || char === 'i' || 
+//   char === 'o' || char === 'u' || 
+//   char === 'A' || char === 'E' || char === 'I' || 
+//   char === 'O' || char === 'U'
+// ) {
+//   console.log("Vowel")
+// } else {
+//   console.log("Consonant")
+// }
+
+// 15. Simple Calculator
+// Definition: Perform +, -, *, / between two numbers.
+// Input: 4 + 2
+// Output: 6
+
+// let a = 4
+// let b = 2
+// let val = '+'
+
+// if(val === '+')
+//   console.log(a+b)
+// else if(val === '-')
+//   console.log(a-b)
+// else if(val === '*')
+//   console.log(a*b)
+// else 
+//   console.log(a/b)
+
+// 16. Find GCD (HCF)
+// Definition: Calculate the greatest common divisor of two numbers.
+// Input: 20 28
+// Output: 4
+
+// let a = 20
+// let b = 28
+// let temp
+
+// while (b != 0) {
+//   temp = b
+//   b = a % b
+//   a = temp
+// }
+
+// console.log(a)
+
+
+// 17. Check Perfect Number
+// Definition: A number whose sum of divisors equals itself.
+// Input: 28
+// Output: Perfect
+
+// let num = 28
+// let sum = 0
+
+// for (let i = 1; i < num; i++) {
+//   if (num % i === 0) {
+//     sum += i
+//   }
+// }
+
+// if (sum === num) {
+//   console.log("Perfect")
+// } else {
+//   console.log("Not Perfect")
+// }
+
+
+// 18. Print All Divisors
+// Definition: Display all positive divisors of a number.
+// Input: 10
+// Output: 1 2 5 10
+
+// let num = 10
+
+// for (let i = 1; i <= num; i++) {
+//   if (num % i === 0) {
+//     console.log(i)
+//   }
+// }
+
+
+// 19. Number is Positive, Negative or Zero
+// Definition: Check if number is +ve, -ve, or zero.
+// Input: -5
+// Output: Negative
+// let num = -5
+
+// if (num > 0) {
+//   console.log("Positive")
+// } else if (num < 0) {
+//   console.log("Negative")
+// } else {
+//   console.log("Zero")
+// }
+
+// 20. Find Power (Exponentiation)
+// Definition: Compute a raised to the power b (a^b).
+// Input: 2 3
+// Output: 8
+
+let a = 2
+let b = 3
+
+console.log(a ** b)
