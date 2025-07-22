@@ -3,7 +3,6 @@
 // Input: 7 
 // Output: Odd 
 
-
 // const a = 7
 
 // if(a%2 == 0)
@@ -298,7 +297,44 @@
 // Input: 2 3
 // Output: 8
 
-let a = 2
-let b = 3
+// let a = 2
+// let b = 3
 
-console.log(a ** b)
+// console.log(a ** b)
+
+
+// Extra = add file 'add.js' 
+
+// import add from "./add.js"
+// console.log(add(11,22))
+// console.log(add(33,22))
+
+// using package path 
+
+// import path from "path"
+
+// const path  = require("path")
+
+// console.log(path.basename("myfile.txt"))
+// console.log("directory name ",__dirname)
+// console.log("full path ",path.resolve(__dirname,"myfile.txt"))
+
+// using package moment
+
+// const moment = require("moment")
+
+// console.log("current data and time: ", moment().format("DD-MM-YY HH:mm:ss"))
+
+// using package FS
+
+const fs = require("fs")
+
+// fs.writeFile("myfile.txt", "HElllo World!!!", (err) => {
+//   console.log(err || "File written successfully!")
+// })
+
+fs.readFile('myfile.txt','utf8',(err,data)=>
+{
+    console.log(err || "File Content:",data)
+})
+
