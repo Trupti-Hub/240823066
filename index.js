@@ -327,14 +327,44 @@
 
 // using package FS
 
-const fs = require("fs")
+// const fs = require("fs")
 
-// fs.writeFile("myfile.txt", "HElllo World!!!", (err) => {
-//   console.log(err || "File written successfully!")
+// // fs.writeFile("myfile.txt", "HElllo World!!!", (err) => {
+// //   console.log(err || "File written successfully!")
+// // })
+
+// fs.readFile('myfile.txt','utf8',(err,data)=>
+// {
+//     console.log(err || "File Content:",data)
 // })
 
-fs.readFile('myfile.txt','utf8',(err,data)=>
-{
-    console.log(err || "File Content:",data)
+
+const mongoose = require("mongoose")
+
+mongoose.connect("mongodb+srv://trupti4267_db_user:Trupti26@trupti.ultucjj.mongodb.net/department", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
 })
 
+const studentSchema = new mongoose.Schema({
+    name: String,
+    department: String,
+    startYear: Number,
+    endYear: Number,
+    address: String
+})
+
+const Student = mongoose.model("Student",studentSchema)
+
+console.log("MongoDB connected successfully")
+
+const student = new Student({
+    name: "Trupti Padia",
+    department: "Computer Science",
+    startYear: 2020,
+    endYear: 2024,
+    enrollment: 123456,
+    address: "XYZ, Rajkot"
+})
+
+student.save().then(() => {console.log("Student saved successfully")}).catch((error => {console.error("Error Saving student:",error)}))
